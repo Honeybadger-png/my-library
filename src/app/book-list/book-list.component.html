@@ -1,4 +1,14 @@
-<div>
+<div >
+    <ul>
+        @for(book of myBooks; track book){
+            <li>{{book.title}}</li>
+        }
+    </ul>
+</div>
+
+
+
+<div >
     <h1>Add Book</h1>
     <form action="">
         <div>
