@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../models/book';
 import { BookService } from './book.service';
-
+import { BookFormComponent } from '../book-form/book-form.component';
 @Component({
   selector: 'app-book-list',
-  imports: [],
+  imports: [BookFormComponent],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
 })

@@ -1,39 +1,30 @@
-<div >
-    <ul>
-        @for(book of myBooks; track book){
-            <li>{{book.title}}</li>
-        }
-    </ul>
+<app-book-form></app-book-form>
+
+<div class="my-2 flex flex-row h-full bg-red-400">
+    <div class="flex-1/12 bg-yellow-300">
+        <h1>deneme</h1>
+    </div>
+    <div class="flex-1/6 bg-yellow-300">
+        <h1>deneme 2 </h1>
+    </div>
+    <div class="flex-1/6 bg-yellow-300">
+        <h1>deneme 3 </h1>
+    </div>
+    <div class="flex-1/6 bg-yellow-300">
+        <h1>deneme 4 </h1>
+    </div>
+    <div class="flex-1/6 bg-yellow-300">
+        <h1>den</h1>
+    </div>
+    <div class="flex-1/6">
+        <ul>
+            @for(book of myBooks; track book){
+                <li>{{book.title}}</li>
+            }
+        </ul>
+    </div>
 </div>
 
 
 
-<div >
-    <h1>Add Book</h1>
-    <form action="">
-        <div>
-            <label for="">Title</label>
-            <input type="text">
-        </div>
-        <div>
-            <label for="">Author</label>
-            <input type="text">
-        </div>
-        <div>
-            <label for="">Length</label>
-            <input type="number">
-        </div>
-        <div>
-            <label for="">Status</label>
-            <input type="text">
-        </div>
-        <div>
-            <label for="">Language</label>
-            <input type="text">
-        </div>
-        <div>
-            <label for="">Main Image</label>
-            <input type="file">
-        </div>
-    </form>
-</div>
+
