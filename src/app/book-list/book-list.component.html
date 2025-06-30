@@ -1,29 +1,42 @@
-<app-book-form></app-book-form>
 
-<div class="my-2 flex flex-row h-full bg-red-400">
-    <div class="flex-1/12 bg-yellow-300">
-        <h1>deneme</h1>
-    </div>
-    <div class="flex-1/6 bg-yellow-300">
-        <h1>deneme 2 </h1>
-    </div>
-    <div class="flex-1/6 bg-yellow-300">
-        <h1>deneme 3 </h1>
-    </div>
-    <div class="flex-1/6 bg-yellow-300">
-        <h1>deneme 4 </h1>
-    </div>
-    <div class="flex-1/6 bg-yellow-300">
-        <h1>den</h1>
-    </div>
-    <div class="flex-1/6">
-        <ul>
-            @for(book of myBooks; track book){
-                <li>{{book.title}}</li>
-            }
-        </ul>
-    </div>
+<div class="">
+    <button class="border-2 p-2 cursor-pointer" [routerLink]="['books']" >Add Book</button>
 </div>
+
+@for (book of myBooks; track book) {
+    <div class="my-2 gap-x-2 w-full flex flex-row overflow-hidden ">
+        <div class="basis-[16%] overflow-hidden  whitespace-nowrap  bg-yellow-300">
+            <h1 class="truncate" >{{book.title}}</h1>
+        </div>
+        <div class="basis-[16%] truncate col-span-1 bg-yellow-300">
+            <h1 class="truncate">{{book.author}}</h1>
+        </div>
+        <div class="basis-[8%] truncate bg-yellow-300">
+            <h1 class="truncate">{{book.length}} </h1>
+        </div>
+        <div class="basis-[8%] truncate bg-yellow-300">
+            <h1 class="truncate">{{book.status}} </h1>
+        </div>
+        <div class="basis-[4%] truncate bg-yellow-300">
+            <h1 class="truncate">{{book.language}} </h1>
+        </div>
+        <div class="basis-[10%] truncate bg-yellow-300">
+            <h1 class="truncate">{{book.addedDate}}</h1>
+        </div>
+        <div class="basis-[10%] truncate bg-yellow-300">
+            <h1 class="truncate">{{book.updatedDate}}</h1>
+        </div>
+        <div class="basis-[10%] truncate bg-yellow-300">
+            <h1 class="truncate">Detail</h1>
+        </div>
+        <div class="basis-[8%] truncate bg-yellow-300">
+            <h1 class="truncate">Edit</h1>
+        </div>
+        <div class="basis-[10%] truncate bg-yellow-300">
+            <h1 class="truncate text-red-500">Delete</h1>
+        </div>
+    </div>
+}
 
 
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-book-form',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class BookFormComponent {
 
+  constructor(private location: Location){
+
+  }
+
+  goBack():void{
+    this.location.back();
+  }
 }
