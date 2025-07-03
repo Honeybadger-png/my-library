@@ -1,42 +1,52 @@
 
-<div class="">
-    <button class="border-2 p-2 cursor-pointer" [routerLink]="['books']" >Add Book</button>
+
+<div class="flex justify-around border-2 p-2 gap-2">
+    <div class="content-center">
+        <h1 class="font-bold">My Library</h1>
+    </div>
+    <div class="border-2 px-2">
+        <button class="cursor-pointer hover:text-blue-500">
+            <i class="fa-solid fa-magnifying-glass "></i>
+        </button>
+        <input class="p-2 focus:border-amber-950  focus:outline-hidden" type="text" name="" id="" placeholder="search">
+        <button class="cursor-pointer hover:text-red-500">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="">
+        <button class="border-2 p-2 cursor-pointer " [routerLink]="['books']" >Add Book</button>
+    </div>
 </div>
 
-@for (book of myBooks; track book) {
-    <div class="my-2 gap-x-2 w-full flex flex-row overflow-hidden ">
-        <div class="basis-[16%] overflow-hidden  whitespace-nowrap  bg-yellow-300">
-            <h1 class="truncate" >{{book.title}}</h1>
-        </div>
-        <div class="basis-[16%] truncate col-span-1 bg-yellow-300">
-            <h1 class="truncate">{{book.author}}</h1>
-        </div>
-        <div class="basis-[8%] truncate bg-yellow-300">
-            <h1 class="truncate">{{book.length}} </h1>
-        </div>
-        <div class="basis-[8%] truncate bg-yellow-300">
-            <h1 class="truncate">{{book.status}} </h1>
-        </div>
-        <div class="basis-[4%] truncate bg-yellow-300">
-            <h1 class="truncate">{{book.language}} </h1>
-        </div>
-        <div class="basis-[10%] truncate bg-yellow-300">
-            <h1 class="truncate">{{book.addedDate}}</h1>
-        </div>
-        <div class="basis-[10%] truncate bg-yellow-300">
-            <h1 class="truncate">{{book.updatedDate}}</h1>
-        </div>
-        <div class="basis-[10%] truncate bg-yellow-300">
-            <h1 class="truncate">Detail</h1>
-        </div>
-        <div class="basis-[8%] truncate bg-yellow-300">
-            <h1 class="truncate">Edit</h1>
-        </div>
-        <div class="basis-[10%] truncate bg-yellow-300">
-            <h1 class="truncate text-red-500">Delete</h1>
-        </div>
-    </div>
-}
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Length</th>
+                <th>Status</th>
+                <th>Language</th>
+                <th>Added Date</th>
+                <th>Updated Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(book of myBooks;track book ){
+                <tr>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.length}}</td>
+                    <td>{{book.status}}</td>
+                    <td>{{book.language}}</td>
+                    <td>{{book.addedDate}}</td>
+                    <td>{{book.updatedDate}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
 
 
 

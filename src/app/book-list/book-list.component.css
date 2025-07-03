@@ -1,3 +1,28 @@
-.deneme{
-    background-color: red;
+.table-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;  
+}
+
+table{
+    width: 100%;
+    border: 2px solid black;
+}
+th{
+    border: 2px solid black;
+}
+
+td{
+    padding: 2px;
+
+    border-style: solid;
+    border-width: 0 0 2px 0 ;
+}
+
+td:nth-child(odd){
+    background-color: #998282;
+}
+
+td:nth-child(even){
+    background-color: #746161;
 }
