@@ -1,2 +1,37 @@
 
-<p>home works!</p>
+<div class="flex flex-col h-[35vh] border-2">
+    <div class="flex flex-row justify-between m-2">
+        <h1>Recent Blog posts</h1>
+        <h1>View More</h1>
+    </div>
+    <div class="flex flex-row p-2 gap-2 h-full">
+        @for(blog of newBlogs;track blog.id; let index = $index){
+            <div class="border-2 w-[25%]">
+                {{index+1}}
+            </div>
+        }
+    </div>
+</div>
+<div class="flex flex-col h-[35vh] border-2 mt-2">
+    <div class="flex flex-row justify-between m-2">
+        <h1>Recent Blog posts</h1>
+        <h1>View More</h1>
+    </div>
+    <div class="flex flex-row p-2 gap-2 h-full w-full ">
+        <div class="w-[25px]">
+            
+        </div>
+        <div class="flex  overflow-hidden w-full">
+            <div class="relative flex flex-row h-full gap-2">
+                @for(seasonBook of currentSeasonBooks;track seasonBook.id; let index = $index){
+                    <div class="border-2 w-[400px]">
+                        {{index+1}}
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="w-[25px]">
+
+        </div>
+    </div>
+</div>
