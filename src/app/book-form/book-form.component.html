@@ -9,47 +9,39 @@
         </div>
         <div class="flex flex-col">
             <h1 class="font-bold">You can add new books to your library </h1>
-            <form class="flex flex-col gap-2" action="">
+            <form class="grid grid-cols-2  gap-2" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
                 <div class="flex gap-2 items-center">
                     <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
+                    <input class="border-b-2 p-2" type="text" placeholder="title" formControlName="title">
                 </div>
                 <div class="flex gap-2 items-center">
                     <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
+                    <input class="border-b-2 p-2" type="text" placeholder="author" formControlName="author">
                 </div>
                 <div class="flex gap-2 items-center">
                     <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
+                    <input class="border-b-2 p-2" type="number" placeholder="length" formControlName="length">
                 </div>
                 <div class="flex gap-2 items-center">
                     <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
+                    <select name="status" id="status" formControlName="status">
+                        <option value="not-started">not started</option>
+                        <option value="started">started</option>
+                        <option value="finished">finished</option>    
+                    </select>
                 </div>
                 <div class="flex gap-2 items-center">
                     <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
+                    <select name="language" id="language" formControlName="language">
+                        <option value="tr">tr</option>
+                        <option value="en">en</option>
+                    </select>
                 </div>
-                <div class="flex gap-2 items-center">
+                <div class="flex col-span-2 gap-2 items-center">
                     <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
+                    <input class="border-b-2 p-2" type="file" placeholder="mainImage" (change)="imageSelected($event)" formControlName="mainImage">
                 </div>
-                <div class="flex gap-2 items-center">
-                    <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
-                </div>
-                <div class="flex gap-2 items-center">
-                    <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
-                </div>
-                <div class="flex gap-2 items-center">
-                    <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
-                </div>
-                <div class="flex gap-2 items-center">
-                    <label for="">Book Form will be here</label>
-                    <input class="border-b-2 p-2" type="text" placeholder="title">
-                </div>
+                <button type="submit">Submit</button>
             </form>
     
         </div>
