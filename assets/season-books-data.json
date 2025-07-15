@@ -1,0 +1,92 @@
+{
+    "seasonBooks": [
+        {
+            "id" : 1,
+            "title": "Blood Sweat and Pixels",
+            "author": "Jason Schreier",
+            "length": "304",
+            "status": "read",
+            "language": "en",
+            "mainImage": "blood-sweat-and-pixels.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        },
+        {
+            "id" : 2,
+            "title": "Clean Code",
+            "author": "Uncle Bob",
+            "length": "464",
+            "status": "reading",
+            "language": "en",
+            "mainImage": "clean-code.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        },
+        {
+            "id" : 3,
+            "title": "Game of Thrones",
+            "author": "George R. R. Martin",
+            "length": "336",
+            "status": "read",
+            "language": "en",
+            "mainImage": "game-of-thrones.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        },
+        {
+            "id" : 4,
+            "title": "Hayri Potter",
+            "author": "J.K Rowling",
+            "length": "309",
+            "status": "read",
+            "language": "en",
+            "mainImage": "hayri-potter.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        },
+        {
+            "id" : 5,
+            "title": "I Who Have Never Known Men",
+            "author": "Jacqueline Harpman",
+            "length": "208",
+            "status": "not yet",
+            "language": "en",
+            "mainImage": "never-known-men.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        },
+        {
+            "id" : 6,
+            "title": "Name of The Wind",
+            "author": "Patrick Rothfuss",
+            "length": "672",
+            "status": "read",
+            "language": "en",
+            "mainImage": "name-of-the-wind.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        },
+        {
+            "id" : 7,
+            "title": "The Fellowship of the ring",
+            "author": "J.R.R Tolkien",
+            "length": "432",
+            "status": "read",
+            "language": "en",
+            "mainImage": "the-fellowship-of-the-ring.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        },
+        {
+            "id" : 8,
+            "title": "The Last Wish",
+            "author": "Andrzej Sapkowski",
+            "length": "352",
+            "status": "read",
+            "language": "en",
+            "mainImage": "the-last-wish.jpg",
+            "addedDate": "15-07-2025",
+            "updatedDate": "15-07-2025"
+        }
+    ]
+}
