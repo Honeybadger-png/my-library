@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Response } from '../models/response';
 
 
 
@@ -8,7 +10,19 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  url: string = 'assets/season-books-data.json';
+  currentSeasonBooks: any[] = [];
+  constructor(private http: HttpClient){
+
+  }
+
+  ngOnInit(): void {
+    this.http.get<Response>(this.url).subscribe(res => {
+      this.currentSeasonBooks = res.seasonBooks;
+      console.log(JSON.stringify(res.seasonBooks));
+    })
+  }
 
   newBlogs = [
     {
@@ -25,28 +39,5 @@ export class HomeComponent {
     },
   ];
 
-  currentSeasonBooks = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-    {
-      id: 6,
-    },
-    {
-      id: 7,
-    }
-  ]
 
 }
