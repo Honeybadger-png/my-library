@@ -1,0 +1,33 @@
+<div class="flex flex-col h-[50vh] border-2 mt-2">
+    <div class="flex flex-row justify-between m-2">
+        <h1>Summer 2025 Books</h1>
+        <h1>View More</h1>
+    </div>
+    <div class="flex flex-row p-2 gap-2 h-full w-full ">
+        <div class="flex w-[25px] items-center">
+            <div class="cursor-pointer text-center">
+                <i class="fa-solid fa-caret-left text-3xl"></i>
+            </div>
+        </div>
+        <div class="flex overflow-hidden w-full h-full">
+            <ul class="relative flex flex-row h-full gap-2">
+                @for(seasonBook of currentSeasonBooks;track seasonBook; let index = $index){
+                    <li class="flex flex-col  w-[200px] h-[40vh] overflow-hidden">
+                        <a class="flex h-[30vh] justify-center items-center cursor-pointer ">
+                            <img class="h-full object-cover" src="images/{{seasonBook.mainImage}}" alt="">
+                        </a>
+                        <div class="flex">
+                            <p class="line-clamp-1">{{seasonBook.title}}</p>
+                        </div>
+                        <app-star-rating [rating]="seasonBook.rating" ></app-star-rating>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="flex w-[25px] items-center">
+            <div class="cursor-pointer">
+                <i class="fa-solid fa-caret-right text-3xl "></i>
+            </div>
+        </div>
+    </div>
+</div>

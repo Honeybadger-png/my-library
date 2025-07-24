@@ -4,6 +4,7 @@ export interface Book {
     author: string;
     length: number;
     status: string;
+    rating: number;
     language: string;
     mainImage: string;
     addedDate: Date;

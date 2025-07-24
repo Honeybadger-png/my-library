@@ -1,26 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Response } from '../models/response';
+import { HomeService } from './home.service';
+import { BlogPostCardComponent } from '../shared/components/blog-post-card/blog-post-card.component';
+import { BooksCarouselComponent } from '../shared/components/books-carousel/books-carousel.component';
+
+
 
 
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [BlogPostCardComponent,BooksCarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-  url: string = 'assets/season-books-data.json';
+
+
   currentSeasonBooks: any[] = [];
-  constructor(private http: HttpClient){
+  constructor(private homeService: HomeService){
 
   }
 
   ngOnInit(): void {
-    this.http.get<Response>(this.url).subscribe(res => {
-      this.currentSeasonBooks = res.seasonBooks;
-      console.log(JSON.stringify(res.seasonBooks));
+    this.homeService.getSeasonBooks().subscribe(data => {
+      this.currentSeasonBooks = data.seasonBooks;
     })
   }
 
