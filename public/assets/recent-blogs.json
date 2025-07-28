@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "blogId": "game-of-thrones-blog",
+            "title": "game of thrones",
+            "mainImage": "blog/images/game-of-thrones-blog.png",
+            "createdAt": "28-07-2025"
+        },
+        {
+            "id": "2",
+            "blogId": "lord-of-the-rings-blog",
+            "title": "Lord of the books",
+            "mainImage": "blog/images/Lotr-blog.png",
+            "createdAt": "28-07-2025"
+        },
+        {
+            "id": "3",
+            "blogId": "productivity-ninja-blog",
+            "title": "Productivity Ninja",
+            "mainImage": "blog/images/Productivity-ninja.png",
+            "createdAt": "28-07-2025"
+        },
+        {
+            "id": "4",
+            "blogId": "the-name-of-the-wind-blog",
+            "title": "The name of the wind",
+            "mainImage": "blog/images/the-name-of-the-wind-blog.png",
+            "createdAt": "28-07-2025"
+        }
+    ]
+}
+
+

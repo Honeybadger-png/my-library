@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { BlogDisplay } from '../../../models/blogDisplay';
 
 @Component({
   selector: 'app-blog-post-card',
@@ -7,8 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './blog-post-card.component.css'
 })
 export class BlogPostCardComponent {
-  @Input() blogPost = {
-    id:0
-  };
+  @Input() blogPosts?:BlogDisplay[] ;
 
 }

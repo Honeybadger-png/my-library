@@ -1,7 +1,7 @@
 {
-    "seasonBooks": [
+    "data": [
         {
-            "id" : 1,
+            "id" : "1",
             "title": "Blood Sweat and Pixels",
             "author": "Jason Schreier",
             "length": "304",

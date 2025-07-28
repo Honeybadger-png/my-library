@@ -1,3 +1,21 @@
-<div class="">
-    {{blogPost.id}}
+
+
+<div class="flex flex-col h-[40vh] border-2">
+    <div class="flex flex-row justify-between m-2">
+        <h1>Recent Blog posts</h1>
+        <a href="">
+            <h1 class="hover:text-amber-200">View More</h1>
+        </a>
+    </div>
+    <div class="flex flex-row justify-center items-center p-2 gap-2 h-full">
+        @for(blog of blogPosts;track blog; let index = $index){
+            <div class="border-2  h-[200px]">
+                <div class="h-full">
+                    <a href="">
+                        <img class="h-full object-contain" src="{{blog?.mainImage}}" alt="">
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
 </div>
