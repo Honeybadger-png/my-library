@@ -1,6 +1,6 @@
 <div class="flex items-center gap-1">
-    @for(star of stars; track star){
-        <i class="fa-solid fa-star text-yellow-400"></i>
+    @for(star of stars; track $index){
+        <i class="fa-solid fa-star text-yellow-400" ></i>
     }
     @if(rating % 1 !==0){
         <i class="fa-solid fa-star-half text-yellow-400"></i>

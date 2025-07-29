@@ -7,14 +7,14 @@
     </div>
     <div class="flex flex-row p-2 gap-2 h-full w-full ">
         <div class="flex w-[25px] items-center">
-            <div class="cursor-pointer text-center">
+            <button class="cursor-pointer disabled:hidden" (click)="slideLeft()" [disabled]="!canSlideLeft">
                 <i class="fa-solid fa-caret-left text-3xl"></i>
-            </div>
+            </button>
         </div>
-        <div class="flex overflow-hidden w-full h-full">
-            <ul class="relative flex flex-row h-full gap-2">
+        <div class="flex overflow-hidden h-full" #outerSlide>
+            <div class="relative flex flex-row  h-full gap-2"  [ngStyle]="{ transform: 'translateX(' + offset + 'px)' }" #innerSlide>
                 @for(seasonBook of currentSeasonBooks;track seasonBook; let index = $index){
-                    <li class="flex flex-col  w-[200px] h-[40vh] overflow-hidden">
+                    <div class="flex flex-col  w-[200px] h-[40vh] overflow-hidden">
                         <a class="flex h-[30vh] justify-center items-center cursor-pointer ">
                             <img class="h-full object-cover" src="images/{{seasonBook.mainImage}}" alt="">
                         </a>
@@ -22,14 +22,14 @@
                             <p class="line-clamp-1">{{seasonBook.title}}</p>
                         </div>
                         <app-star-rating [rating]="seasonBook.rating" ></app-star-rating>
-                    </li>
+                    </div>
                 }
-            </ul>
+            </div>
         </div>
         <div class="flex w-[25px] items-center">
-            <div class="cursor-pointer">
+            <button class="cursor-pointer disabled:hidden" (click)="slideRight()" [disabled]="!canSlideRight">
                 <i class="fa-solid fa-caret-right text-3xl "></i>
-            </div>
+            </button>
         </div>
     </div>
 </div>
