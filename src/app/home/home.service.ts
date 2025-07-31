@@ -1,22 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Response } from '../models/response';
 import { Observable } from 'rxjs';
 import { BlogDisplay } from '../models/blogDisplay';
+import { Book } from '../models/book';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
-  seasonBooksUrl: string = 'assets/season-books-data.json';
-  recentBlogsUrl: string = 'assets/recent-blogs.json';
+  private apiUrl = "http://localhost:3001"
+  private booksURI = "/books";
+  private blogsURI = "/recent-blogs";
 
   constructor(private http : HttpClient) { }
 
-  getSeasonBooks(): Observable<Response> {
-    return this.http.get<Response>(this.seasonBooksUrl);
+  getSeasonBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(this.apiUrl + this.booksURI);
   }
-  getRecentBlogs(): Observable<Response>{
-    return this.http.get<Response>(this.recentBlogsUrl);
+  getRecentBlogs(): Observable<BlogDisplay[]>{
+    return this.http.get<BlogDisplay[]>(this.apiUrl + this.blogsURI);
   }
 }

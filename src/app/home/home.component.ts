@@ -21,10 +21,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.homeService.getSeasonBooks().subscribe(response => {
-      this.currentSeasonBooks = response.data;
+      this.currentSeasonBooks = response;
     })
     this.homeService.getRecentBlogs().subscribe(response=> {
-      this.recentBlogs = response.data;
+      this.recentBlogs = response;
     })
   }
 
