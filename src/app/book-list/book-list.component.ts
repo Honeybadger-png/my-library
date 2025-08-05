@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../models/book';
-import { BookService } from './book.service';
+import { BooksTableComponent } from '../shared/components/books-table/books-table.component';
 import { RouterLink } from '@angular/router';
 import { Choice as TableChoice } from '../models/listChoice';
 @Component({
   selector: 'app-book-list',
-  imports: [RouterLink],
+  imports: [RouterLink,BooksTableComponent],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
 })
@@ -14,21 +13,13 @@ export class BookListComponent implements OnInit {
   tableChoice = TableChoice.list;
 
 
-
-  myBooks: Book[] = [];
-
-  constructor(private bookService:BookService){
+  constructor(){
 
   }
   ngOnInit(): void {
-    this.retrieveBooks();
+
   }
 
-  retrieveBooks(){
-    this.bookService.getMyBooks().subscribe(books => {
-      this.myBooks = books
-    });
-  }
 
   setChoice(choice: TableChoice){
     console.log(choice);

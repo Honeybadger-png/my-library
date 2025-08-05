@@ -21,34 +21,7 @@
 </div>
 
 @if(tableChoice === TableChoice.list){
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Length</th>
-                    <th>Status</th>
-                    <th>Language</th>
-                    <th>Added Date</th>
-                    <th>Updated Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for(book of myBooks;track book ){
-                    <tr>
-                        <td>{{book.title}}</td>
-                        <td>{{book.author}}</td>
-                        <td>{{book.length}}</td>
-                        <td>{{book.status}}</td>
-                        <td>{{book.language}}</td>
-                        <td>{{book.addedDate}}</td>
-                        <td>{{book.updatedDate}}</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+    <app-books-table />
 }
 
 
