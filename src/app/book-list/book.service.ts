@@ -31,4 +31,11 @@ export class BookService {
   updateBook(id:string , updatedBook: Book):Observable<Book>{
     return this.http.put<Book>(this.bookApiUrl + '/books' + id , updatedBook)
   }
+
+  usePagination(currentPage:number,pageSize:number,books:Book[]){
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    let currentPageData = books.slice(startIndex,endIndex);  
+    return currentPageData;
+  }
 }

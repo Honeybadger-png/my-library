@@ -20,7 +20,9 @@
     </div>
 </div>
 
-@if(tableChoice === TableChoice.list){
+@if(tableChoice === TableChoice.image){
+    <app-books-display/>
+}@else {
     <app-books-table />
 }
 

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { BooksTableComponent } from '../shared/components/books-table/books-table.component';
 import { RouterLink } from '@angular/router';
 import { Choice as TableChoice } from '../models/listChoice';
+import { BooksDisplayComponent } from '../shared/components/books-display/books-display.component';
 @Component({
   selector: 'app-book-list',
-  imports: [RouterLink,BooksTableComponent],
+  imports: [RouterLink,BooksTableComponent,BooksDisplayComponent],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
 })

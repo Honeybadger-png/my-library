@@ -1,0 +1,30 @@
+<div class="h-[70vh]">
+    <div class="grid grid-cols-5 gap-2 p-2 h-full ">
+        @for(currentBook of currentBooks; track currentBook){
+            <div class="h-[220px]">
+                <div class="flex justify-center h-[180px]">
+                    <img class="h-full object-contain" src="images/{{currentBook.mainImage}}" alt="">
+                </div>
+                <div class="justify-items-center">
+                    <h2 class="line-clamp-1">{{currentBook.title}}</h2>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <div class="flex justify-center">
+        <div class="flex justify-center content-center items-center gap-4 w-[60vw]">
+            <div>
+                <button>prev</button>
+            </div>
+            <ul class="flex gap-2 overflow-hidden">
+                <li class="p-2 border-2 rounded-xl">1</li>
+                <li class="p-2 border-2 rounded-xl">2</li>
+                <li class="p-2 border-2 rounded-xl">3</li>
+            </ul>
+            <div>
+                <button>next</button>
+            </div>
+        </div>
+    </div>
+</div>
